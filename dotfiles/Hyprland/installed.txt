@@ -1,7 +1,6 @@
 Waybar
-eww
 swaync
 hyprpaper
 hyprland
 hyprlock
-Python3 , for scripts and for import or download libraries check pythons file
+Python3 # for scripts {You Have to Import some libraries For that you can check out the scripts and nvim lsp files bcz lsp-language need python libraries}
