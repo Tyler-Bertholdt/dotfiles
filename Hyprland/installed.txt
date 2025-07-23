@@ -1,0 +1,7 @@
+Waybar
+eww
+swaync
+hyprpaper
+hyprland
+hyprlock
+Python3 , for scripts and for import or download libraries check pythons file
