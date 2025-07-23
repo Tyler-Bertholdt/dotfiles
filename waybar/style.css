@@ -1,0 +1,31 @@
+*{
+        font-weight: 600;
+        font-family: 'Heptaslab','JetBrainsMono Nerd Font Propo', sans-serif;
+  /*   font-family: 'SF Pro Text','JetBrainsMono Nerd Font Propo', sans-serif; */
+
+}
+#waybar{        
+background-color:#060b17;
+border-radius: 30px;
+border: 1px rgba(255, 255, 255, 0.1) solid;
+}
+tooltip{
+font-family: 'SF Pro Text';
+font-weight: 400;
+}
+#clock{
+padding-right: 10px;
+font-size: 11.6px;
+}
+#custom-swaync{
+font-size: 14px;
+margin-top: 1px;
+margin-right: 10px;
+
+}
+#tray{
+border-radius: 30px;
+border: 1px rgba(0,0,0,0.1) solid;
+padding-right: 7px;
+
+}
