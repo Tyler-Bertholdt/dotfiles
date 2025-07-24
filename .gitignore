@@ -1,0 +1,10 @@
+# Ignore backup and temp files
+*.bak
+*.swp
+*~
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore broken symlinks or recursion
+swaync/swaync
