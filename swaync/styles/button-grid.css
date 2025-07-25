@@ -1,4 +1,13 @@
-.widget-button-grid.css{
-margin: 5;
-padding: 0;
-} 
+.widget-buttons-grid {
+  padding: 8px;
+  margin: 8px;
+}
+
+.widget-buttons-grid flowboxchild > button {
+  border-radius: 30px;
+}
+
+.widget-buttons-grid flowboxchild > button.toggle:checked {
+  /* style given to the active toggle button */
+}
+
