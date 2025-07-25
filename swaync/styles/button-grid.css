@@ -4,15 +4,16 @@
 }
 
 .widget-buttons-grid flowboxchild > button {
-  border-radius: 30px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   padding-top: 10;
   padding-bottom: 10;
   padding-left: 0;
   padding-right: 0;
   margin: 3;
 }
-.widget-buttons-grid flowboxchild > button {
-
+.widget-buttons-grid flowboxchild{
+margin: 0;
 
 }
 .widget-buttons-grid flowboxchild > button.toggle:checked {
