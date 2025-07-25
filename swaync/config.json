@@ -55,8 +55,8 @@
                 "buttons-grid",
                 "title",
                 "dnd",
-                "notifications",
-                "mpris"
+                "mpris",
+                "notifications"
         ],
         "widget-config": {
                 "inhibitors": {
