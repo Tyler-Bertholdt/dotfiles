@@ -1,0 +1,22 @@
+* {
+        font-weight:bold;
+        font-family: 'SF Pro Text','JetBrainsMono Nerd Font Propo', sans-serif;
+
+}
+
+window#waybar {
+
+        background: rgba(255,255,255,0.01);
+        border-radius: 12px;            
+        border-radius: 15px;
+        color: #ffffff;
+        border-radius: 30px;
+
+}
+
+window#waybar.hidden {
+        opacity: 0.2;
+}
+tooltip{
+        background:  rgba(255,255,255,0.01);
+        box-shadow: none; }
