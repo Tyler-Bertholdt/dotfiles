@@ -1,9 +1,6 @@
+
 #clock,#custom-swaync , #battery,#tray , #pulseaudio {
         color:white;
-/*      background: linear-gradient(135deg,
-                rgba(154,155,155,0.19) 0%,
-                rgba(179, 120, 155, 0.05) 40%,
-                rgba(79, 110, 215, 0.27) 100%);  */
         border-radius:30px;
         padding-left: 4px;
         padding-right: 7px;
@@ -57,92 +54,40 @@
         font-size: 14px;
 }
 
-#workspaces {
-        background: linear-gradient(129deg,
-                rgba(254,255,255,0.21) 0%,
-                rgba(179, 220, 255, 0.15) 40%,
-                rgba(79, 110, 215, 0.07) 100%);
-        border-radius: 20px;
-        border: 1px solid rgba(4, 84, 184, 0.5);
-        padding: 3px 6px;
-}
+#workspaces{
+      background: linear-gradient(135deg,
+rgba(154,155,155,0.29) 0%,
+rgba(179, 170, 175, 0.15) 40%,
+rgba(79, 110, 215, 0.27) 100%);  
 
-#workspaces button {
-        background: linear-gradient(129deg,
-                rgba(254,255,255,0.21) 0%,
-                rgba(179, 220, 255, 0.15) 40%,
-                rgba(79, 110, 215, 0.07) 100%);
-        color: lightblue;
-        padding: 0px 10px;
-        font-size: 15px;
-        border-radius: 15px;
-}                                     
-#workspaces button:hover {
-        background-color: rgba(94 , 134 , 239 , 0.7);
-        color: #ffffff;
-        border-radius: 40px;
-        font-size: 22px;
-        padding: 4 11px;
-        margin: 0 11px;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 0.4s;
-        transition: background-color 0.3s ease;
-}
-
-#workspaces button.active:hover {
-        background-color: rgba(94 , 134 , 239 , 0.8);
-        color: #ffffff;
-        border-radius: 40px;
-        font-size: 24px;
-        padding: 4 11px;
-        margin: 0 11px;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 0.3s;
-        transition:linear 0.3s;
-}
-
-#workspaces button.active {
-        background: linear-gradient(129deg,
-                rgba(254,255,255,0.21) 0%,
-                rgba(179, 220, 255, 0.15) 40%,
-                rgba(79, 110, 215, 0.07) 100%);
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 1.5s;
-        color: black;
-        border-radius: 20px;
-        font-size: 23px;
-        padding-left: 8px;
-        margin-left: 8px;
-        padding-right: 8px;
-        margin-right: 8px;
-
-}
-#workspaces button.empty:hover{
-        font-size: 10px;
-        background-color: rgba(94 , 134 , 239 , 0.4);
-        color: gray;
-        border-radius: 40px;
-        padding: 4 11px;
-        margin: 3 11px;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 0.3s;
-        transition:linear 0.3s;
-}
-#workspaces button.empty{
-        font-size: 10px;
-        color: gray;
-}
-#workspaces button.urgent {
-        background-color: rgba(4,84,184,1);
-        color: white;
-        margin-left: 6px;
-        margin-right: 6px;
-        padding-left: 6px;
-        padding-right: 6px;
         border-radius: 30px;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 2s;
+        font-size: 15px;
+}
+#workspaces button{
+/* nothing but atoms and some mosquito's in my rooms */
+        padding: 3px;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*      background: linear-gradient(135deg,
+
+rgba(154,155,155,0.19) 0%,
+rgba(179, 120, 155, 0.05) 40%,
+rgba(79, 110, 215, 0.27) 100%);  */
