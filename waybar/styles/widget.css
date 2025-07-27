@@ -1,12 +1,17 @@
-#clock {
+#clock,#custom-swaync , #battery,#tray {
         color:white;
+        background: linear-gradient(135deg,
+                rgba(154,155,155,0.19) 0%,
+                rgba(179, 120, 155, 0.05) 40%,
+                rgba(79, 110, 215, 0.27) 100%);
         border-radius:30px;
-        padding-left: 9px;
+        border: 1.7px solid rgba(12,45,178,0.11);
+        padding-left: 6px;
         padding-right: 7px;
-        margin-left:6px;
+        margin-left:5px;
         font-size:12.5px;
 }
-#clock:hover{
+#clock:hover,#custom-swaync:hover , #battery:hover , #tray:hover {
         font-size: 13.5px;
         background: linear-gradient(135deg,
                 rgba(21, 31, 86, 0.90) 0%,
@@ -15,33 +20,34 @@
         border: 1.5px solid rgba(255,255,255,0.11);
         box-shadow: 0 8px 32px 0 rgba(16,18,42,0.17),
                 0 0 18px 0 rgba(255,255,255,0.10) inset;
-        margin-left: 8px;
+        margin-left: 7px;
+        padding-left: 8px;
+        padding-right: 8px;
         transition: cubic-bezier(0.19, 1, 0.22, 1);
         transition-duration: 0.5s;
 }
 
-#custom-swaync , #battery{
+#custom-swaync{
         font-size: 19px;
         padding-left: 9px;
-        margin-left: 6px;
+        padding-right: 9px;
+        margin-left: 5px;
 
 }
-#custom-swaync:hover , #battery:hover{
-        font-size: 20px;
-        border-radius: 30px;
-        padding-right: 8px;
-        padding-left: 8px;
-        background: linear-gradient(135deg,
-                rgba(21, 31, 86, 0.90) 0%,
-                rgba(23, 39, 117, 0.45) 40%,
-                rgba(13, 19, 155, 0.87) 100%);
-        border: 1.5px solid rgba(255,255,255,0.11);
-        box-shadow: 0 8px 32px 0 rgba(16,18,42,0.17),
-                0 0 18px 0 rgba(255,255,255,0.10) inset;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 0.5s;
+#custom-swaync:hover , #battery:hover , #tray:hover {
+        font-size: 21px;
+        padding-right: 10px;
+        padding-left: 10px;
 }
-
+#battery{
+padding-left: 9px;
+padding-right: 9px;
+margin-left: 5px;
+}
+#tray {
+        padding-left: 7px;
+        margin-left: 5px;
+}
 #workspaces {
         background: linear-gradient(129deg,
                 rgba(254,255,255,0.21) 0%,
@@ -187,17 +193,4 @@
 
 }
 
-#tray {
-        background-color: transparent;
-        border-radius: 30px;
-        padding: 0px;
-        margin-left:1px;
-
-}
-
-#tray > .tray-icon {
-        font-size: 30px; /* Adjust size as needed */
-        margin: 0 4px;
-        color:transparent;
-}
 
