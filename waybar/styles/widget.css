@@ -32,21 +32,21 @@
         padding-left: 9px;
         padding-right: 9px;
         margin-left: 5px;
+        #battery{
+                padding-left: 9px;
+                padding-right: 9px;
+                margin-left: 5px;
+        }
+        #tray {
+                padding-left: 7px;
+                margin-left: 5px;
+        }
 
 }
 #custom-swaync:hover , #battery:hover , #tray:hover {
         font-size: 21px;
         padding-right: 10px;
         padding-left: 10px;
-}
-#battery{
-padding-left: 9px;
-padding-right: 9px;
-margin-left: 5px;
-}
-#tray {
-        padding-left: 7px;
-        margin-left: 5px;
 }
 #workspaces {
         background: linear-gradient(129deg,
