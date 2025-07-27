@@ -1,4 +1,4 @@
-#clock,#custom-swaync , #battery,#tray {
+#clock,#custom-swaync , #battery,#tray , #pulseaudio {
         color:white;
         background: linear-gradient(135deg,
                 rgba(154,155,155,0.19) 0%,
@@ -11,7 +11,8 @@
         margin-left:5px;
         font-size:12.5px;
 }
-#clock:hover,#custom-swaync:hover , #battery:hover , #tray:hover {
+
+#clock:hover,#custom-swaync:hover , #battery:hover , #tray:hover , #pulseaudio:hover{
         font-size: 13.5px;
         background: linear-gradient(135deg,
                 rgba(21, 31, 86, 0.90) 0%,
@@ -33,24 +34,30 @@
         padding-right: 9px;
         margin-left: 5px;
 }
+
 #battery{
-                padding-left: 9px;
-                font-size: 19px;
-                padding-right: 9px;
-                margin-left: 5px;
-        }
+        padding-left: 9px;
+        font-size: 19px;
+        padding-right: 9px;
+        margin-left: 5px;
+}
 
 #tray {
-                padding-left: 7px;
-                margin-left: 5px;
-        }
+        font-size: 14px;
+        padding-left: 6px;
+        margin-left: 5px;
+}
 
-
-#custom-swaync:hover , #battery:hover , #tray:hover {
+#custom-swaync:hover , #battery:hover, #tray:hover {
         font-size: 21px;
         padding-right: 10px;
         padding-left: 10px;
 }
+
+#tray:hover{
+        font-size: 14px;
+}
+
 #workspaces {
         background: linear-gradient(129deg,
                 rgba(254,255,255,0.21) 0%,
@@ -60,6 +67,7 @@
         border: 1px solid rgba(4, 84, 184, 0.5);
         padding: 3px 6px;
 }
+
 #workspaces button {
         background: linear-gradient(129deg,
                 rgba(254,255,255,0.21) 0%,
@@ -137,63 +145,5 @@
         transition-duration: 2s;
 }
 
-#pulseaudio {
-        background: linear-gradient(129deg,
-                rgba(254,255,255,0.21) 0%,
-                rgba(179, 220, 255, 0.15) 40%,
-                rgba(79, 110, 215, 0.07) 100%);
-        color: black;
-        padding:8px;
-        border-radius:30px; 
-}
-
-#pulseaudio:hover {
-        background-color: rgba(94 , 134 , 239 , 0.8);
-        color: white;
-        padding: 8px;
-        border-radius:30px; 
-        font-size:17px;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 1s;
-}
-#pulseaudio.muted {
-        background-color: rgba(4,84,184,1);
-        color: white;
-        border-radius: 30px;
-        border:0.8px solid white;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 1s;
-        font-size: 18px;
-}
-
-#network {
-        background: linear-gradient(129deg,
-                rgba(254,255,255,0.21) 0%,
-                rgba(179, 220, 255, 0.15) 40%,
-                rgba(79, 110, 215, 0.07) 100%);
-        border-radius:30px;
-        color:black;
-        margin-right: 5px;
-        padding: 0px 10px;
-}
-
-#network.disconnected {
-        background-color: #f53c3c;
-        font-size: 15px;
-        transition:cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 2s;
-        color: white;
-}
-#network:hover{
-        background-color: rgba(94 , 134 , 239 , 0.8);
-        color: white;
-        padding: 8px;
-        padding-left: 10px;
-        border-radius:30px; 
-        font-size:16px;
-        transition: cubic-bezier(0.19, 1, 0.22, 1);
-        transition-duration: 1s;
-
-}
 
 
