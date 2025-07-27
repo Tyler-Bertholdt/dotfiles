@@ -32,17 +32,20 @@
         padding-left: 9px;
         padding-right: 9px;
         margin-left: 5px;
-        #battery{
+}
+#battery{
                 padding-left: 9px;
+                font-size: 19px;
                 padding-right: 9px;
                 margin-left: 5px;
         }
-        #tray {
+
+#tray {
                 padding-left: 7px;
                 margin-left: 5px;
         }
 
-}
+
 #custom-swaync:hover , #battery:hover , #tray:hover {
         font-size: 21px;
         padding-right: 10px;
