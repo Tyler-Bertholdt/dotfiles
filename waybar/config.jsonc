@@ -52,8 +52,8 @@
         },
 
         "tray": {
-                "icon-size": 21,
-                "spacing": 9
+                "icon-size": 15,
+                "spacing": 13
         },
         "battery": {
                 "format": "{icon}",
