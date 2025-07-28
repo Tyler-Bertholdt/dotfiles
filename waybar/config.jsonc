@@ -2,8 +2,8 @@
 
 {
   "include": [
-    "configs/all.jsonc",
-    "configs/left.jsonc"
+    "~/.config/waybar/configs/all.jsonc",
+    "~/.config/waybar/configs/left.jsonc"
   ],
 
    /*
