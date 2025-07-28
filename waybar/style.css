@@ -1,4 +1,4 @@
-@import "styles/workspaces.css";
+@import "styles/center.css";
 @import "styles/all.css";
-@import "styles/widget.css";
-@import "styles/button.css";
+@import "styles/right.css";
+@import "styles/left.css";
