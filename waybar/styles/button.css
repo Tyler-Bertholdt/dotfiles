@@ -1,0 +1,33 @@
+#group-terminal{
+}
+#custom-tyler{
+font-size: 18px;
+padding: 0;
+margin-left: 8px;
+margin-right: 15px;
+}
+#custom-terminal{
+font-size: 12px;
+margin-right: 10px;
+}
+#group-hardware{
+}
+#custom-button{
+font-size: 12px;
+margin-right: 10px;
+}
+#cpu{
+margin-right: 7px;
+font-size: 12px;
+}
+#memory{
+margin-right: 7px;
+font-size: 12px;
+}
+#gamemode{
+font-size: 11px;
+margin-right: 5px;
+ }
+#custom-launcher{
+font-size: 12px;
+}

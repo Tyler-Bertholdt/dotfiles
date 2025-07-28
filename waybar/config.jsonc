@@ -1,9 +1,9 @@
 // -*- mode: jsonc -*-
 {
    /* 
-        !!!!!!!!!!!!!!!!!!!!
-        !! Waybar_Configs !!
-        !!!!!!!!!!!!!!!!!!!!
+   !!!!!!!!!!!!!!!!!!!!
+   !! Waybar_Configs !!
+   !!!!!!!!!!!!!!!!!!!!
    */  
    "layer": "bottom",
    "position": "top",
@@ -14,138 +14,199 @@
    "margin-left": 3,
    "padding-right":5,
    "padding-left":5,
+
    /*
-        !!!!!!!!!!!!!!!
-        !!! Modules !!!
-        !!!!!!!!!!!!!!!
-        */
-        "modules-left": [
-                "custom/terminal" 
-        ],
-        "modules-center": [
-                "hyprland/workspaces"
-        ],
-        "modules-right": [
-                "memory",
-                "cpu","pulseaudio","battery",
-                "tray" ,  "custom/swaync" , "clock"
-        ],
+   !!!!!!!!!!!!!!!
+   !!! Modules !!!
+   !!!!!!!!!!!!!!!
+   */
+
+   "modules-left": [
+           "group/terminal" 
+   ],
+   "modules-center": [
+           "hyprland/workspaces"
+   ],
+   "modules-right": [
+           "pulseaudio","battery",
+           "tray" ,  "custom/swaync" , "clock"
+   ],
 
   /*
-        !!!!!!!!!!!!!!!!!!!!!!!
-        !!! Modules Configs !!!
-        !!!!!!!!!!!!!!!!!!!!!!!
-        */
+    !!!!!!!!!!!!!!!!!!!!!!!
+    !!! Modules Configs !!!
+    !!!!!!!!!!!!!!!!!!!!!!!
+  */
+  "group/terminal": {
+          "orientation": "horizontal",
+          "drawer": {
+                  "transition-duration": 500,
+                  "children-class": "button1",
+                  "transition-left-to-right": true,
+                  "click-to-reveal": true
+          },
+          "modules": [
+                  "custom/tyler",
+                  "custom/terminal",
+                  "group/hardware",
+                  "group/launcher"
 
-        "clock": {
-                "timezone": "India/Kolkata",
-                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-                "format": "{:%a %b %d  %I:%M %p}"
-        },
+          ]
+  },
+  "custom/tyler":{
+          "format":"󰣇",
+          "tooltip":false
+  },
+  "custom/terminal":{
+"format":"Terminal",
+"tooltip":false,
+"on-click":"xfce4-terminal"
+  },
+  "group/hardware": {
+          "orientation": "horizontal",
+          "drawer": {
+                  "transition-duration": 500,
+                  "children-class": "button1",
+                  "transition-left-to-right": true,
+                  "click-to-reveal": true
+          },
+          "modules": [
+                  "custom/button",
+                  "cpu",
+                  "memory",
+                  "gamemode"
+          ]
+  },
+  "custom/button":{
+          "format":"Performance",
+          "tooltip":false
+  },
+  "cpu": {
+          "format": "{usage}% ",
+          "tooltip": true,
+      "tooltip-format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+  },
+  "memory": {
+          "interval": 30,
+          "format": "{used:0.1f}GB ",
+          "tooltip":true,
+          "tooltip-format":"Used:{used:0.1f}GB/Total:{total:0.1f}GB"
+  },
+  "gamemode": {
+          "format": "{glyph}",
+          "format-alt": "{glyph} {count}",
+          "glyph": "",
+          "hide-not-running": false,
+          "use-icon": true,
+          "icon-name": "input-gaming-symbolic",
+          "icon-spacing": 4,
+          "icon-size": 20,
+          "tooltip": true,
+          "tooltip-format": "Games running: {count}"
+  },
+  "group/launcher":{
+          "format":"Launcher",
+          "orientation": "horizontal",
+          "drawer": {
+                  "transition-duration": 500,
+                  "children-class": "button1",
+                  "transition-left-to-right": true,
+                  "click-to-reveal": true
+          },
+          "modules": [
+                  "custom/launcher"
+          ]
+  },
+  "custom/launcher":{
+"format":"Launcher",
+"tooltip":false
 
-        "custom/swaync": {
-                "format": "{}",
-                "interval": 1,
-                "exec": "~/.config/waybar/scripts/swaync_status.sh",
-                "on-click": "~/.config/waybar/scripts/swaync_toggle.sh",
-                "tooltip":false
-        },
+  },
+  "clock": {
+          "timezone": "India/Kolkata",
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+          "format": "{:%a %b %d  %I:%M %p}"
+  },
 
-        "tray": {
-                "icon-size": 15,
-                "spacing": 13
-        },
-        "battery": {
-                "format": "{icon}",
-                "format-full": "{capacity}% {icon}",
-                "format-alt": "<span>{capacity}% {icon} </span>",
-                "format-icons": ["", "", "", "", ""]
-        },
-        "gamemode": {
-                "format": "{glyph}",
-                "format-alt": "{glyph} {count}",
-                "glyph": "",
-                "hide-not-running": false,
-                "use-icon": true,
-                "icon-name": "input-gaming-symbolic",
-                "icon-spacing": 4,
-                "icon-size": 20,
-                "tooltip": true,
-                "tooltip-format": "Games running: {count}"
-        },
-        "memory": {
-                "interval": 30,
-                "format": "{used:0.1f}G/{total:0.1f}G "
-        },
-        "hyprland/workspaces": {    
-                "disable-scroll": false,
-                "all-outputs": true,
-                "warp-on-scroll": true,
-                "format": "{icon}",
+  "custom/swaync": {
+          "format": "{}",
+          "interval": 1,
+          "exec": "~/.config/waybar/scripts/swaync_status.sh",
+          "on-click": "~/.config/waybar/scripts/swaync_toggle.sh",
+          "tooltip":false
+  },
 
-                /*"format-icons": {
-                        "1": "1", 
-                        "2": "2", 
-                        "3": "3",//"󰣇"
-                        "4": "4", 
-                        "5": "5",*/
-                        "focused":"󰲠",
-                        "urgent": "",
-                        "default": "",
-                        "empty":"󰤂"
-                },
-                "persistent-workspaces":{
-                        "*":5
-                },
-                "on-click": "activate",
-                "on-scroll-down": "hyprctl dispatch workspace e+1",
-                "on-scroll-up": "hyprctl dispatch workspace e-1"
-        },
-        "keyboard-state": {
-                "numlock": true,
-                "capslock": true,
-                "format": "{name} {icon}",
-                "format-icons": {
-                        "locked": "",
-                        "unlocked": ""
-                }
-        },
-        "cpu": {
-                "format": "{usage}% ",
-                "tooltip": false
-        },
-        "temperature": {
+  "tray": {
+          "icon-size": 15,
+          "spacing": 13
+  },
+  "battery": {
+          "format": "{icon}",
+          "format-full": "{capacity}% {icon}",
+          "format-alt": "<span>{capacity}% {icon} </span>",
+          "format-icons": ["", "", "", "", ""]
+  },
+  "hyprland/workspaces": {    
+          "disable-scroll": false,
+          "all-outputs": true,
+          "warp-on-scroll": true,
+          "format": "{icon}",
+
+          "format-icons": {
+                  "focused":"󰲠",
+                  "urgent": "",
+                  "default": "",
+                  "empty":"󰤂"
+          },
+          "persistent-workspaces":{
+                  "*":5
+          },
+          "on-click": "activate",
+          "on-scroll-down": "hyprctl dispatch workspace e+1",
+          "on-scroll-up": "hyprctl dispatch workspace e-1"
+  },
+  "keyboard-state": {
+          "numlock": true,
+          "capslock": true,
+          "format": "{name} {icon}",
+          "format-icons": {
+                  "locked": "",
+                  "unlocked": ""
+          }
+  },
+  "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
-        },
-        "backlight": {
+  },
+  "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
-        },
-        "battery#bat2": {
-                "bat": "BAT2"
-        },
-        "power-profiles-daemon": {
-                "format": "{icon}",
-                "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-                "tooltip": true,
-                "format-icons": {
-                        "default": "",
-                        "performance": "",
-                        "balanced": "",
-                        "power-saver": ""
-                }
-        },
+  },
+  "battery#bat2": {
+          "bat": "BAT2"
+  },
+  "power-profiles-daemon": {
+          "format": "{icon}",
+          "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+          "tooltip": true,
+          "format-icons": {
+                  "default": "",
+                  "performance": "",
+                  "balanced": "",
+                  "power-saver": ""
+          }
+  },
 
 
 
 
-        "network": {
+  "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
@@ -153,10 +214,10 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
-        },
-        "pulseaudio": {
-                "scroll-step": 1, // %, can be a float
-                "format": "{volume}% {icon}",
+  },
+  "pulseaudio": {
+          "scroll-step": 1, // %, can be a float
+          "format": "{volume}% {icon}",
       //  "format-bluetooth": "{volume}% {icon}",
        // "format-bluetooth-muted": " {icon}{headphone}",
        "format-muted": "  Muted",
@@ -173,19 +234,19 @@
            "default": ["", "", ""]
        }
 
-        }, 
-        "custom/media": {
-                "format": "{icon} {text}",
-                "return-type": "json",
-                "max-length": 40,
-                "format-icons": {
-                        "spotify": "",
-                        "default": "🎜"
-                },
-                "escape": true,
-                "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+  }, 
+  "custom/media": {
+          "format": "{icon} {text}",
+          "return-type": "json",
+          "max-length": 40,
+          "format-icons": {
+                  "spotify": "",
+                  "default": "🎜"
+          },
+          "escape": true,
+          "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-        }
+  }
    /* "custom/power": {
             "format" : "⏻ ",
             "tooltip": false,
