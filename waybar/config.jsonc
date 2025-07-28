@@ -1,5 +1,12 @@
 // -*- mode: jsonc -*-
 {
+  "include": [
+    "configs/settings.jsonc",
+    "configs/modules.jsonc",
+    "configs/bars.jsonc"
+  ]
+}
+{
    /* 
    !!!!!!!!!!!!!!!!!!!!
    !! Waybar_Configs !!
