@@ -1,0 +1,95 @@
+{
+        "modules-left": [
+                "group/terminal" 
+        ],
+
+
+        "group/terminal": {
+                "orientation": "horizontal",
+                "drawer": {
+                        "transition-duration": 500,
+                        "children-class": "button1",
+                        "transition-left-to-right": true,
+                        "click-to-reveal": true
+                },
+                "modules": [
+                        "custom/tyler",
+                        "custom/terminal",
+                        "group/hardware",
+                        "group/launcher"
+
+                ]
+        },
+        "custom/tyler":{
+                "format":"󰣇",
+                "tooltip":false
+        },
+        "custom/terminal":{
+                "format":"Terminal",
+                "tooltip":false,
+                "on-click":"xfce4-terminal"
+        },
+        "group/hardware": {
+                "orientation": "horizontal",
+                "drawer": {
+                        "transition-duration": 500,
+                        "children-class": "button1",
+                        "transition-left-to-right": true,
+                        "click-to-reveal": true
+                },
+                "modules": [
+                        "custom/button",
+                        "cpu",
+                        "memory",
+                        "gamemode"
+                ]
+        },
+        "custom/button":{
+                "format":"Performance",
+                "tooltip":false
+        },
+        "cpu": {
+                "format": "{usage}% ",
+                "tooltip": true,
+                "tooltip-format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+                "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+        },
+        "memory": {
+                "interval": 30,
+                "format": "{used:0.1f}GB ",
+                "tooltip":true,
+                "tooltip-format":"Used:{used:0.1f}GB/Total:{total:0.1f}GB"
+        },
+        "gamemode": {
+                "format": "{glyph}",
+                "format-alt": "{glyph} {count}",
+                "glyph": "",
+                "hide-not-running": false,
+                "use-icon": true,
+                "icon-name": "input-gaming-symbolic",
+                "icon-spacing": 4,
+                "icon-size": 20,
+                "tooltip": true,
+                "tooltip-format": "Games running: {count}"
+        },
+        "group/launcher":{
+                "format":"Launcher",
+                "orientation": "horizontal",
+                "drawer": {
+                        "transition-duration": 500,
+                        "children-class": "button1",
+                        "transition-left-to-right": true,
+                        "click-to-reveal": true
+                },
+                "modules": [
+                        "custom/launcher"
+                ]
+        },
+        "custom/launcher":{
+                "format":"Launcher",
+                "tooltip":false
+
+        }
+
+
+}

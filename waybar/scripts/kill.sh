@@ -1,5 +1,6 @@
 #!/bin/zsh
-killall waybar 
+killall waybar
+sleep 0.5
 waybar & disown
  
 
