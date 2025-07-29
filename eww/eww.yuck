@@ -1,7 +1,7 @@
 (defpoll time-poll :interval "1s"
   "date +'%H:%M'")
 
-(defwidget far []
+(defwidget rar []
   (box :orientation "h"
        :space-evenly false
        :spacing 20
