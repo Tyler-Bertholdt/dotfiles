@@ -1,7 +1,7 @@
 (defpoll time-poll :interval "1s"
   "date +'%H:%M'")
 
-(defwidget bar []
+(defwidget far []
   (box :orientation "h"
        :space-evenly false
        :spacing 20
@@ -28,3 +28,5 @@
   :geometry (geometry :x "0%" :y "0%" :width "100%" :height "30px" :anchor "top center")
   :reserve (struts :side "top" :distance "30px")
   (bar))
+# test change
+# test change
