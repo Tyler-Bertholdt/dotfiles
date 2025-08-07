@@ -3,88 +3,14 @@
 {
   "include": [
     "~/.config/waybar/configs/all.jsonc",
-    "~/.config/waybar/configs/left.jsonc"
-  ],
+    "~/.config/waybar/configs/left.jsonc",
+    "~/.config/waybar/configs/center.jsonc",
+    "~/.config/waybar/configs/right.jsonc"
+  ]
 
    /*
    !!!!!!!!!!!!!!!
    !!! Modules !!!
    !!!!!!!!!!!!!!!
    */
-
-   "modules-left": [
-           "group/terminal" 
-   ],
-   "modules-center": [
-           "hyprland/workspaces",
-           "hyprland/window"
-   ],
-   "modules-right": [
-           "pulseaudio","battery",
-           "tray" ,  "custom/swaync" , "clock"
-   ],
-
-  /*
-    !!!!!!!!!!!!!!!!!!!!!!!
-    !!! Modules Configs !!!
-    !!!!!!!!!!!!!!!!!!!!!!!
-  */
-
-  "clock": {
-          "timezone": "India/Kolkata",
-          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-          "format": "{:%a %b %d  %I:%M %p}"
-  },
-
-  "custom/swaync": {
-          "format": "{}",
-          "interval": 1,
-          "exec": "~/.config/waybar/scripts/swaync_status.sh",
-          "on-click": "~/.config/waybar/scripts/swaync_toggle.sh",
-          "tooltip":false
-  },
-
-  "tray": {
-          "icon-size": 15,
-          "spacing": 13
-  },
-  "battery": {
-          "format": "{icon}",
-          "format-full": "{capacity}% {icon}",
-          "format-alt": "<span>{capacity}% {icon} </span>",
-          "format-icons": ["", "", "", "", ""]
-  },
-  "hyprland/workspaces": {    
-          "disable-scroll": false,
-          "all-outputs": true,
-          "warp-on-scroll": true,
-          "format": "{icon}",
-
-          "format-icons": {
-                  "focused":"󰲠",
-                  "urgent": "",
-                  "default": "",
-                  "empty":"󰤂"
-          },
-          "persistent-workspaces":{
-                  "*":5
-          }
-  },
-  "pulseaudio": {
-          "scroll-step": 1, 
-        "format": "{volume}%  {icon}",
-       "format-muted": "  Muted",
-       "format-alt": "<span>{volume}% {icon} {format_source}</span>",
-       "format-source": "{volume}% ",
-       "format-source-muted": "",
-       "format-icons": {
-           "default": ["", "", ""]
-       }
-
-  },
-"hyprland/window": {
-  "format": "",             // hide the title entirely
-  "icon": true,
-  "icon-size": 20
-}
 }

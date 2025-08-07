@@ -1,0 +1,46 @@
+{
+   "modules-right": [
+           "pulseaudio","battery",
+           "tray" ,  "custom/swaync" , "clock"
+   ],
+
+  "clock": {
+          "timezone": "India/Kolkata",
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+          "format": "{:%a %b %d  %I:%M %p}"
+  },
+
+  "custom/swaync": {
+          "format": "{}",
+          "interval": 1,
+          "exec": "~/.config/waybar/scripts/swaync_status.sh",
+          "on-click": "~/.config/waybar/scripts/swaync_toggle.sh",
+          "tooltip":false
+  },
+
+  "tray": {
+          "icon-size": 15,
+          "spacing": 13
+  },
+  "battery": {
+          "format": "{icon}",
+          "format-full": "{capacity}% {icon}",
+          "format-alt": "<small>{capacity}% {icon} </small>",
+          "format-icons": ["", "", "", "", ""]
+  },
+  "pulseaudio": {
+          "scroll-step": 1, 
+        "format": "{volume}%  {icon}",
+       "format-muted": "  Muted",
+       "on-click-right":"pavucontrol",
+       "format-alt": "<span>{volume}% {icon} {format_source}</span>",
+       "format-source": "{volume}% ",
+       "format-source-muted": "",
+       "format-icons": {
+           "default": ["", "", ""]
+       }
+
+  }
+}
+
+

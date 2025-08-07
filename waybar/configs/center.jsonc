@@ -1,0 +1,37 @@
+{
+   "modules-center": [
+           "hyprland/workspaces",
+           "hyprland/window"
+   ],
+
+
+  "hyprland/workspaces": {    
+          "disable-scroll": false,
+          "all-outputs": true,
+          "warp-on-scroll": true,
+          "format": "{icon}",
+
+          "format-icons": {
+                  "focused":"󰲠",
+                  "urgent": "",
+                  "default": "",
+                  "empty":"󰤂"
+          },
+          "persistent-workspaces":{
+                  "*":5
+          }
+  },
+
+"hyprland/window": {
+  "format":"",
+  "icon": true,
+  "icon-size": 20
+}
+
+
+
+
+
+ 
+
+}
