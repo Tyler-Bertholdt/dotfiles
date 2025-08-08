@@ -16,5 +16,8 @@ window#waybar.hidden {
         opacity: 0.2;
 }
 tooltip{
-        background:  rgba(255,255,255,0.01);
+        background: linear-gradient(135deg,
+                rgba(41, 41, 206, 0.20) 0%,
+                rgba(43, 49, 157, 0.33) 40%,
+                rgba(43, 49, 175, 0.37) 100%);
         box-shadow: none; }
