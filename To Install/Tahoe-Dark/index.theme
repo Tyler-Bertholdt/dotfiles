@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Tahoe-Dark
+Comment=macOS-style dark GTK theme
+
+[X-GNOME-Metatheme]
+GtkTheme=Tahoe-Dark
+
+[GTK]
+GtkTheme=Tahoe-Dark

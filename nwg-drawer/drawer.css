@@ -1,0 +1,55 @@
+window {
+    background-color: rgba(36,36,36, 0.9);
+    color: white;
+ border: 2px solid steelblue;
+    border-radius: 20px;
+}
+/* search entry */
+entry {
+        background: linear-gradient(135deg,
+                rgba(21, 31, 186, 0.10) 0%,
+                rgba(23, 39, 117, 0.15) 40%,
+                rgba(13, 19, 155, 0.17) 100%);
+}
+
+button, image {
+    background:transparent;
+    border: none;
+}
+button{
+background-color: rgba(255,255,255,0.001);
+font-size: 15.0px;
+margin-bottom: 11px;
+
+}
+
+button:hover {
+   background-color: rgba(255,255,255,0.2);
+        border-radius:12px;
+ font-weight: 500;
+}
+
+/* in case you wanted to give category buttons a different look */
+#category-button {
+    margin: 0 10px 0 10px;
+    font-size: 15px;
+}
+
+#pinned-box {
+    padding-bottom: 5px;
+    border-bottom: 1px dotted gray;
+        font-size: 11px;
+}
+
+#files-box {
+    padding: 5px;
+    border-radius: 15px;
+    background-color:transparent
+}
+
+/* math operation result label */
+#math-label {
+    font-weight: bold;
+    font-size: 16px;
+        background-color: transparent;
+}
