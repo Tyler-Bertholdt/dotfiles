@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 fortune linux | cowsay -f tux | lolcat | awk '{print "\033[94m" $0 "\033[39m"}'
+alias melody='~/.local/share/pipx/venvs/melody-cli/bin/python -m Melody_CLI'

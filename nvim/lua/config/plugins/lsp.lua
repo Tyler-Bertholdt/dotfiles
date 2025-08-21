@@ -44,7 +44,13 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
-
+-- Configure diagnostics globally
+vim.diagnostic.config({
+  virtual_text = false,  -- disable inline diagnostics
+  signs = false,          -- keep the icons in the gutter
+  underline = true,      -- keep squiggly underlines
+  update_in_insert = false,
+})
     end
   },
 }

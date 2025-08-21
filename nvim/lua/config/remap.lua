@@ -66,8 +66,8 @@ vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { noremap=true , desc = "Move line 
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap=true , desc = "Move selected lines up" })  
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap=true , desc = "Move selected lines down" })  
 vim.keymap.set("n", "<leader>rp", ":terminal python3 '%'<CR>i", { desc = "Run Current Python File"})
-vim.keymap.set("n", "<leader>l1", ":so ~/.config/nvim/lua/config/after/plugins/color.lua<CR>", { desc = "Layout 1"})
-vim.keymap.set("n", "<leader>l2", ":colorscheme tokyonight-night<CR>", { desc = "Layout 2"})
+vim.keymap.set("n", "<leader>l", ":TransparentToggle<CR>" , {desc = "Transparent Toggle"})
+
 -- MultiCursor
 
 vim.keymap.set({ "n", "v" }, "<C-n>", function()

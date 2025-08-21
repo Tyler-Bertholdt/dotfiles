@@ -13,8 +13,8 @@
   "custom/swaync": {
           "format": "{}",
           "interval": 1,
-          "exec": "~/.config/waybar/scripts/swaync_status.sh",
-          "on-click": "~/.config/waybar/scripts/swaync_toggle.sh",
+          "exec": "~/.config/scripts/swaync_status.sh",
+          "on-click": "~/.config/scripts/swaync_toggle.sh",
           "tooltip":false
   },
 
