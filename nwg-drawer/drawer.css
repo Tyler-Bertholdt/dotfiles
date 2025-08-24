@@ -4,7 +4,6 @@ window {
  border: 2px solid steelblue;
     border-radius: 20px;
 }
-/* search entry */
 entry {
         background: linear-gradient(135deg,
                 rgba(21, 31, 186, 0.10) 0%,
@@ -29,7 +28,6 @@ button:hover {
  font-weight: 500;
 }
 
-/* in case you wanted to give category buttons a different look */
 #category-button {
     margin: 0 10px 0 10px;
     font-size: 15px;
@@ -47,7 +45,6 @@ button:hover {
     background-color:transparent
 }
 
-/* math operation result label */
 #math-label {
     font-weight: bold;
     font-size: 16px;

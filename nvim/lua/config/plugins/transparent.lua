@@ -5,17 +5,44 @@ return {
         config = function()
                 require("transparent").setup({
                         extra_groups = {
-                                "NvimTreeNormal",     -- Nvim-tree background
+                                "NvimTreeNormal",
                                 "NvimTreeNormalNC",
                                 "Statusline",
                                 "StatuslineNC",
                                 "MiniStatuslineInactive",
                                 "MiniStatusline",
-                                "MiniStatuslineActive",
+                                "MiniStatuslineFilename",
+                                "MiniStatuslineFileinfo",
+                                "MiniStatuslineDevinfo",
                                 "NvimTreeStatusLine",
                                 "NvimTreeStatusLineNC",
                                 "StatusLineTerm",
-                                "StatusLineTermNC"                                                                                                                             
+                                "StatusLineTermNC",
+                                "BufferlineFill",
+                                "BufferLineOffsetSeparator",
+                                "TabLineFill",
+                                "EndOfBuffer",
+                                "NvimTreeEndOfBuffer",
+                                "NvimTreeWinSeparator",
+                                "Cursor",
+                                "debugPc",
+                                "lCursor",
+                                "CursorIM",
+                                "NormalFloat",
+                                "WhichKeyNormal",
+                                "Todo",
+                                "TelescopeNormal",
+                                "TelescopeBorder",
+                                "TelescopePromptBorder",
+                                "TelescopePromptTitle",
+                                "LspInfoBorder",
+                                "CmpDocumentation",
+                                "CmpDocumentationBorder",
+                                "MiniPickPrompt",
+                                "NormalSB",
+                                "SignColoumSB",
+
+
                         },
                         exclude_groups = {},
                 })
