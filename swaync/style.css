@@ -23,7 +23,6 @@
 }
 
 .close-button {
-  /* The notification Close Button */
   background: var(--noti-close-bg);
   color: var(--text-color);
   text-shadow: none;
@@ -79,15 +78,14 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action {
-  /* The large action that also displays the notification summary and body */
-  padding: 4px;
+  padding: 2px;
   margin: 0;
   box-shadow: none;
   background: transparent;
   border: none;
   color: var(--text-color);
   transition: background 0.15s ease-in-out;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .notification-row .notification-background .notification .notification-default-action:hover {
@@ -96,7 +94,6 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action:not(:only-child) {
-  /* When alternative actions are visible */
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -108,16 +105,13 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .image {
-  /* Notification Primary Image */
   -gtk-icon-filter: none;
   -gtk-icon-size: var(--notification-icon-size);
   border-radius: 100px;
-  /* Size in px */
-  margin: 4px;
+  margin: 3px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .app-icon {
-  /* Notification app icon (only visible when the primary image is set) */
   -gtk-icon-filter: none;
   -gtk-icon-size: var(--notification-app-icon-size);
   -gtk-icon-shadow: 0 1px 4px black;
@@ -125,12 +119,10 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box label {
-  /* Fixes base GTK 4 CSS setting a filter of opacity 50% for some odd reason */
   filter: none;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
-  /* Notification summary/title */
   font-size: 16px;
   font-weight: bold;
   background: transparent;
@@ -139,7 +131,6 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
-  /* Notification time-ago */
   font-size: 16px;
   font-weight: bold;
   background: transparent;
@@ -293,21 +284,17 @@
 }
 
 .control-center {
-  /* The Control Center which contains the old notifications + widgets */
-  background-color: rgba(0,0,0, 0.55);
+  background-color: rgba(10,10,10,0.2);
   color: var(--text-color);
   border-radius: 15px;
   margin-right: 8px;
-  border: 0.5px solid black;
 }
 
 .control-center .control-center-list-placeholder {
-  /* The placeholder when there are no notifications */
   opacity: 0.5;
 }
 
 .control-center .control-center-list {
-  /* List of notifications */
   background: transparent;
 }
 
@@ -326,7 +313,6 @@
 }
 
 .blank-window {
-  /* Window behind control center and on all other monitors */
   background: transparent;
 }
 
@@ -413,11 +399,11 @@ background-color: transparent;
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
   font-weight: bold;
-  font-size: 11px
+  font-size: 16px
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
-  font-size: 10px;
+  font-size: 16px;
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
@@ -502,13 +488,14 @@ margin: 0;
 
 /* Volume widget */
 :root {
-  --widget-volume-row-icon-size: 24px;
+  --widget-volume-row-icon-size: 12px;
 }
 
 .widget-volume {
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
+  background-color: rgba(10,10,10,0.4);
 }
 
 /* Each row app icon */
@@ -531,7 +518,7 @@ margin: 0;
 }
 
 .widget-slider label {
-  font-size: inherit;
+  font-size: 10px;
 }
 
 /* Backlight widget */
