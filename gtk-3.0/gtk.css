@@ -1,2 +1,12 @@
 /* Remove dotted lines from GTK 3 applications */
 .undershoot.top, .undershoot.right, .undershoot.bottom, .undershoot.left { background-image: none; }
+decoration, 
+.background, 
+window, 
+.popup, 
+.dialog, 
+popover {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}

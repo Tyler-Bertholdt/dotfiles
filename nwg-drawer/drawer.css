@@ -1,14 +1,12 @@
 window {
-    background-color: rgba(36,36,36, 0.9);
+background-color: rgba(0,0,0, 0.01);
     color: white;
  border: 2px solid steelblue;
     border-radius: 20px;
 }
 entry {
-        background: linear-gradient(135deg,
-                rgba(21, 31, 186, 0.10) 0%,
-                rgba(23, 39, 117, 0.15) 40%,
-                rgba(13, 19, 155, 0.17) 100%);
+        background-color: rgba(0,0,0, 0.4);
+        border: white solid 0.2px;
 }
 
 button, image {
@@ -17,8 +15,9 @@ button, image {
 }
 button{
 background-color: rgba(255,255,255,0.001);
-font-size: 15.0px;
+font-size: 10.0px;
 margin-bottom: 11px;
+color: white;
 
 }
 
@@ -30,7 +29,7 @@ button:hover {
 
 #category-button {
     margin: 0 10px 0 10px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #pinned-box {
