@@ -4,30 +4,14 @@
 font-size: 18px;
 padding: 0;
 margin-left: 8px;
-margin-right: 15px;
+margin-right: 16px;
 }
-#custom-terminal{
+#custom-window_title{
+font-size: 11.6px;
+font-weight : 800;
+margin-right: 14px;
+}
+#custom-file , #custom-edit , #custom-view , #custom-window , #custom-go , #custom-help{
 font-size: 12px;
 margin-right: 10px;
-}
-#group-hardware{
-}
-#custom-button{
-font-size: 12px;
-margin-right: 10px;
-}
-#cpu{
-margin-right: 7px;
-font-size: 12px;
-}
-#memory{
-margin-right: 7px;
-font-size: 12px;
-}
-#gamemode{
-font-size: 11px;
-margin-right: 5px;
- }
-#custom-launcher{
-font-size: 12px;
 }

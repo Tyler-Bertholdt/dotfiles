@@ -1,0 +1,47 @@
+
+/* Window Background */
+#outer-box {
+margin: 5px;
+border: 0.8px solid black;
+border-radius: 12px;
+background-color: rgba(255,255,255,0.35);
+}
+/* Border Window */
+window {
+margin: 5px;
+border: 2px solid red;
+background-color: rgba(0,0,0,0);
+}
+/*Input / Search */
+#input {
+margin: 15px;
+margin-left: 0px;
+font-size: 15px;
+color: black;
+background-color:rgba(255,255,255,0.0);
+border: none;
+}
+
+/*Entry Window*/
+#inner-box {
+background-color: transparent;
+}
+#entry:selected {
+background-color: rgba(0,0,0,0);
+}
+#text:selected {
+background-color: red;
+}
+
+
+#scroll {
+margin: 5px;
+border: 2px solid orange;
+background-color: orange;
+}
+
+#text {
+margin: 5px;
+background-color: cyan;
+color: black;
+} 

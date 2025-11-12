@@ -1,46 +1,83 @@
 {
-   "modules-right": [
-           "pulseaudio","battery",
-           "tray" ,  "custom/swaync" , "clock"
-   ],
+        "modules-right": [
+         "group/performance","pulseaudio","battery",
+                "tray" ,  "custom/swaync" , "clock"
+        ],
 
-  "clock": {
-          "timezone": "India/Kolkata",
-          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-          "format": "{:%a %b %d  %I:%M %p}"
-  },
+        "clock": {
+                "timezone": "India/Kolkata",
+                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+                "format": "{:%a %b %d  %I:%M %p}"
+        },
 
-  "custom/swaync": {
-          "format": "{}",
-          "interval": 1,
-          "exec": "~/.config/scripts/swaync_status.sh",
-          "on-click": "~/.config/scripts/swaync_toggle.sh",
-          "tooltip":false
-  },
+        "custom/swaync": {
+                "format": "{}",
+                "interval": 1,
+                "exec": "~/.config/scripts/swaync_status.sh",
+                "on-click": "~/.config/scripts/swaync_toggle.sh",
+                "tooltip":false
+        },
 
-  "tray": {
-          "icon-size": 15,
-          "spacing": 13
-  },
-  "battery": {
-          "format": "{icon}",
-          "format-full": "{capacity}% {icon}",
-          "format-alt": "<small>{capacity}% {icon} </small>",
-          "format-icons": ["", "", "", "", ""]
-  },
-  "pulseaudio": {
-          "scroll-step": 1, 
-        "format": "{volume}%  {icon}",
-       "format-muted": "  Muted",
-       "on-click-right":"pavucontrol",
-       "format-alt": "<span>{volume}% {icon} {format_source}</span>",
-       "format-source": "{volume}% ",
-       "format-source-muted": "",
-       "format-icons": {
-           "default": ["", "", ""]
-       }
+        "tray": {
+                "icon-size": 15,
+                "spacing": 13
+        },
+        "battery": {
+                "format": "{icon}",
+                "format-full": "{capacity}% {icon}",
+                "format-alt": "<small>{capacity}% {icon} </small>",
+                "format-icons": ["", "", "", "", ""]
+        },
+        "pulseaudio": {
+                "scroll-step": 10,
+                "tooltip-format":"{volume}% {icon} {desc}",
+                "format": "{volume}%  {icon}",
+                "format-muted": "  Muted",
+                "on-click-right":"pavucontrol",
+                "format-alt": "{volume}% {icon} {format_source}",
+                "format-source": "{volume}% ",
+                "format-source-muted": "",
 
-  }
+                "format-icons": {
+                        "default": ["", "", ""]
+                }
+
+
+        },
+
+        "group/performance": {
+                "orientation": "horizontal",
+                "drawer": {
+                        "transition-duration": 500,
+                        "children-class": "button1",
+                        "transition-left-to-right": true,
+                        "click-to-reveal": true
+                },
+                "modules": [
+                        "custom/performance","memory","cpu"
+                ]
+        },
+        "custom/performance":{
+                "format":"",
+                "tooltip":false
+        },
+        "cpu": {
+                        "format-alt":"",
+                        "format": "{usage}% ",
+                        "tooltip": true,
+                        "tooltip-format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+                        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+                },
+                "memory": {
+                        "interval": 31,
+                        "format-alt":"",
+                        "format": "{used:1.1f}GiB ",
+                        "tooltip":true,
+                        "tooltip-format":"Used:{used:1.3f}GiB/Total:{total:0.3f}GiB"
+                }
+
+
+
 }
 
 

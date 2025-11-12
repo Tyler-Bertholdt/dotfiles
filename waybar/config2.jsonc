@@ -1,0 +1,16 @@
+
+// -*- mode: jsonc -*-
+
+{
+  "include": [
+    "~/.config/waybar/configs/all.jsonc",
+    "~/.config/waybar/configs/left.jsonc",
+    "~/.config/waybar/configs/right.jsonc"
+  ]
+
+   /*
+   !!!!!!!!!!!!!!!
+   !!! Modules !!!
+   !!!!!!!!!!!!!!!
+   */
+}

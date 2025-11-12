@@ -1,0 +1,8 @@
+show=Search
+lines=10
+width=46%           
+location=center     
+filter_rate=100
+hide_search=false
+--style=~/.config/wofi/style.css
+EOF

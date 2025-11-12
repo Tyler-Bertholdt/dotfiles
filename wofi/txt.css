@@ -1,0 +1,82 @@
+
+/* Window Background */
+#window {
+  background-color: rgba(0,0, 0, 0.15);
+  border-radius: 12px;
+  padding: 0px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+/* Search Input */
+#input {
+  background-color: transparent;
+  border-radius: 8px;
+  margin-left: 200px;
+  padding: 12px 16px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #111111;
+  border: none;
+  box-shadow: none;
+}
+
+#input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Results Scroll Area */
+#scroll {
+  margin-top: 12px;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 4px; /* For a slight scrollbar padding */
+}
+
+/* Each Entry Item */
+#entry {
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: transparent;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#entry:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Selected Entry */
+#selected {
+  background-color: #007aff;
+        color: #111111;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  border-radius: 12px;
+}
+
+#selected #text, #selected .secondary {
+  color: #ffffff;
+}
+
+/* Secondary Text */
+#text, .secondary {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  margin-left: 200px;
+  margin-right: 0px;
+}
+
+/* Responsive Center + Width */
+@media (min-width: 900px) {
+  #window {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35vw;
+  }
+}

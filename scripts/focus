@@ -1,0 +1,32 @@
+#!/bin/bash
+
+LOGFILE="$HOME/Server/focus_log.txt"
+STATEFILE="$HOME/Server/.focus_state"
+
+if [ "$1" = "start" ]; then
+        if [ -f "$STATEFILE" ]; then
+                echo "⚠️ Already focusing on: $(cat $STATEFILE)"
+                exit 1
+        fi
+        echo "$2" > "$STATEFILE"
+        START_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+        echo "[$START_TIME] START - $2" >> "$LOGFILE"
+        echo "✅ Focus started on: $2"
+elif [ "$1" = "stop" ]; then
+        if [ ! -f "$STATEFILE" ]; then
+                echo "⚠️ No active focus session."
+                exit 1
+        fi
+        TASK=$(cat "$STATEFILE")
+        rm "$STATEFILE"
+        END_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+        START_LINE=$(grep -F "START - $TASK" "$LOGFILE" | tail -n 1)
+        START_TIMESTAMP=$(echo "$START_LINE" | awk '{print $1" "$2}' | tr -d '[]')
+        DURATION=$(($(date +%s) - $(date -d "$START_TIMESTAMP" +%s)))
+        MINS=$((DURATION / 60))
+        echo "[$END_TIME] STOP  - $TASK (Duration: ${MINS}m)" >> "$LOGFILE"
+        echo "[Focus stopped] Duration: ${MINS}m"
+else
+        echo "Usage: focus start \"task name\" | focus stop"
+fi
+

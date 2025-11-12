@@ -1,7 +1,6 @@
 {
    "modules-center": [
-           "hyprland/workspaces",
-           "hyprland/window"
+           "hyprland/workspaces"
    ],
 
 
@@ -20,13 +19,9 @@
           "persistent-workspaces":{
                   "*":5
           }
-  },
-
-"hyprland/window": {
-  "format":"",
-  "icon": true,
-  "icon-size": 20
+  }
 }
+
 
 
 
@@ -34,4 +29,4 @@
 
  
 
-}
+
